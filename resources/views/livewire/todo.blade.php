@@ -21,9 +21,10 @@
             @foreach($this->todos as $todo)
                 <li class="mt-6">
                     <div>
+                        <h3 class="font-bold">{{$todo->title}}</h3>
                         <input type="checkbox"
                                wire:click="toggleCompleted({{$todo->id}})" {{$todo->completed ? 'checked' : ''}}>
-                        <span class="{{$todo->completed ? 'line-through' : ''}}">{{$todo->title}}</span>
+                        <span class="{{$todo->completed ? 'line-through' : ''}}">{{$todo->description}}</span>
                         <button type="button" class="rounded text-red-700" wire:click="delete({{$todo->id}})">Delete
                         </button>
                     </div>
