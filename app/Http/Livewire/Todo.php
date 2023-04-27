@@ -7,6 +7,9 @@ use Livewire\Component;
 class Todo extends Component
 {
 
+    public string $title = '';
+
+    public string $description = '';
     public function render()
     {
         return view('livewire.todo');
